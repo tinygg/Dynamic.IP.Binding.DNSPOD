@@ -10,5 +10,5 @@
   0. 有DNSPOD账号并且添加了独立域名
   1. 路由器做好端口映射
   2. 服务器装好python我的版本是2.7
-  3. 服务器新建windows计划任务,定期执行2min比较合适
+  3. 服务器新建windows计划任务,定期执行2min比较合适  
   任务执行程序和参数:python  path-to-DNSPOD_CN_Login.py
