@@ -12,3 +12,8 @@
   2. 服务器装好python我的版本是2.7
   3. 服务器新建windows计划任务,定期执行2min比较合适  
   任务执行程序和参数:python  path-to-DNSPOD_CN_Login.py
+
+##注意
+执行频率不能过快,否则ip138.com会屏蔽你的请求...
+下个版本使用APNIC查询
+https://cgi1.apnic.net/cgi-bin/my-ip.php?&_=1445217586120
