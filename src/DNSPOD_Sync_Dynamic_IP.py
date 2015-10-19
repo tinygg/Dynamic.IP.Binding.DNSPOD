@@ -4,6 +4,7 @@ import re
 import sys
 import ssl
 import time
+import os
 from dnspod.apicn import *
 
 reload(sys)
@@ -16,6 +17,8 @@ def main():
     domain_id = 'your domain id '
     kxnf_record_id = 'your record id'
     domain_name = 'your sub domain = record'#不是全部比如  A.abc.com 则只需要填A
+    
+    log_path = 'C:\update_ip_records.txt'
     ##kxnf = 104917035
     ##kxnf1 = 104970653
     
@@ -67,7 +70,11 @@ def main():
     '''
     step3.更新记录
     '''
-    log = file('C:\update_ip_records.txt','a')
+    if os.path.isfile(log_path):
+        log = file(log_path,'a')
+    else:
+        log = file(log_path)
+        log = file(log_path,'a')
     if(need_update):
         print "Modify Record"
         api = RecordModify(
