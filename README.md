@@ -6,9 +6,9 @@
 
 -  依赖DNSPOD.CN开放接口
 -  *获取当前服务器外网IP,比对域名解析的IP地址,不一致则解析为当前的外网IP地址,一致则什么也不做*
-改为:直接获取IP地址,并更新
+    改为:直接获取IP地址,并更新
 -  *每次查询都会记录日志*
-改为:用forever自带的log和error日志
+    改为:用forever自带的log和error日志
 
 ##条件
 
@@ -16,8 +16,8 @@
 -  路由器做好端口映射
 -  *服务器装好python我的版本是2.7*
 -  *服务器新建windows计划任务,定期执行2min比较合适*
-改为:node forever后台运行: forever start -l log.txt -e err.txt -o out.txt -a  run.js  
-相关命令：forever list\ forever stop run.js\ forever stopall
+    改为:node forever后台运行: forever start -l log.txt -e err.txt -o out.txt -a  run.js  
+    相关命令：forever list\ forever stop run.js\ forever stopall
 -  *任务执行程序和参数:python  path-to-DNSPOD_CN_Login.py*
 -  安装node,并安装插件:dnspod-client,forever
 
