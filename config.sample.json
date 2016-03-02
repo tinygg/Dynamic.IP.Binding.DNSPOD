@@ -1,0 +1,16 @@
+{
+    "account":{
+
+    	"email": "xxxx@qq.com",
+    	"pwd": "xxxxxx"
+	},
+	"domain":{
+		    "domain_id": "xxxx",
+		    "record_id": "xxxx",
+		    "sub_domain": "ABC",
+    		"record_type":"A",
+    		"record_line":"默认",
+    		"mx":"-"
+	},
+	"interval":10
+}
