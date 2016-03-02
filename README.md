@@ -13,8 +13,8 @@
 
 -  有DNSPOD账号并且添加了独立域名,添加A记录,例如ABC.your-domain.com
 -  路由器做好端口映射
--  改为:node forever后台运行: forever start -l log.txt -e err.txt -o out.txt -a  run.js  
-   相关命令：forever list\ forever stop run.js\ forever stopall
+-  node forever后台运行: `forever start -l log.txt -e err.txt -o out.txt -a  run.js  `
+   相关命令：`forever list`、` forever stop run.js`、 `forever stopall `
 -  安装node,并安装插件:dnspod-client,forever
 
 ## 升级日志 
