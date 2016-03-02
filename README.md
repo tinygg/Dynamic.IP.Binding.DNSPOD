@@ -29,7 +29,7 @@
 
 ### 0.2.0 
 
-- 改用nodejs版本
+- 改成nodejs版本
 - 清理项目,采用sublime text编写测试
 - 改用配置文件config.json的形式
 - 采用dnspod提供的IP获取方法(这才是正确的姿势！！！)
