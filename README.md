@@ -2,29 +2,20 @@
 
   没有申请外网静态IP的情况下,实现域名动态IP绑定
   
-##原理
+##说明
 
 -  依赖DNSPOD.CN开放接口
--  *获取当前服务器外网IP,比对域名解析的IP地址,不一致则解析为当前的外网IP地址,一致则什么也不做*
-    改为:直接获取IP地址,并更新
--  *每次查询都会记录日志*
-    改为:用forever自带的log和error日志
+-  node库dnspod-client,获取IP地址,并调用DNSPOD的recordModify更新接口
+-  用forever自带的-l,-o,-e记录日志
+-  记得将config.sample.json改为config.json,对应地修改里面的配置项
 
 ##条件
 
--  有DNSPOD账号并且添加了独立域名
+-  有DNSPOD账号并且添加了独立域名,添加A记录,例如ABC.your-domain.com
 -  路由器做好端口映射
--  *服务器装好python我的版本是2.7*
--  *服务器新建windows计划任务,定期执行2min比较合适*
-    改为:node forever后台运行: forever start -l log.txt -e err.txt -o out.txt -a  run.js  
-    相关命令：forever list\ forever stop run.js\ forever stopall
--  *任务执行程序和参数:python  path-to-DNSPOD_CN_Login.py*
+-  改为:node forever后台运行: forever start -l log.txt -e err.txt -o out.txt -a  run.js  
+   相关命令：forever list\ forever stop run.js\ forever stopall
 -  安装node,并安装插件:dnspod-client,forever
-
-##注意
-
--  *执行频率不能过快,否则IP查询接口服务站点会屏蔽你的请求*
--  记得将config.sample.json改为config.json,对应地修改里面的配置项
 
 ## 升级日志 
 
