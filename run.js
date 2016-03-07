@@ -66,7 +66,8 @@ function refresh()
 	                    if (err) {
 	                        throw err;
 	                    } else {
-	                    	console.log(data.status.created_at+ '\t' + data.record.value + '\t' + data.status.message);
+							//fix log disk full error
+	                    	//console.log(data.status.created_at+ '\t' + data.record.value + '\t' + data.status.message);
 	                    }
 	                });
 	        }
